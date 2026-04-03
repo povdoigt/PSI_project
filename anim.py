@@ -65,12 +65,12 @@ def animate(i):
 
 
 
-    point_T.set_data([df_T['X terre'][int(theta_T)% 360]],[df_T['Y terre'][int(theta_T)% 360]])
+    point_T.set_data([df_T['X terre'][int(theta_T%360)]],[df_T['Y terre'][int(theta_T%360)]])
 
-    point.set_data([df_U['X Uranus'][int(theta_U)]],[df_U['Y Uranus'][int(theta_U)w])
+    point.set_data([df_U['X Uranus'][int(theta_U%360)]],[df_U['Y Uranus'][int(theta_U%360)]])
 
-    point_S.set_data([df_U['X trans Uranus'][theta_S% 360]],[df_U['Y trans Uranus'][theta_S% 360]])
-    line.set_data([df_U['X trans Uranus'][:theta_S% 360]],[df_U['Y trans Uranus'][:theta_S% 360]])
+    point_S.set_data([df_U['X trans Uranus'][int(theta_S)]],[df_U['Y trans Uranus'][int(theta_S)]])
+    line.set_data([df_U['X trans Uranus'][:int(theta_S)]],[df_U['Y trans Uranus'][:int(theta_S)]])
     
     return point,point_T,point_S,line
 
